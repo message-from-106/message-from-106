@@ -8,6 +8,7 @@
 @charset "UTF-8";
 body {
   margin: 0;
+  background-color: #1e2021;
 }
 
 .rk-container {
@@ -53,7 +54,7 @@ body {
 }
 
 .rk-header {
-  background-color: #fff;
+  background-color: #1e2021;
   position: relative;
   z-index: 5;
 }
@@ -98,6 +99,7 @@ body {
   text-transform: uppercase;
   width: 20%;
   margin-bottom: 0px;
+  color: #CCC8C3;
 }
 .rk-logo sup {
   font-size: .5625rem;
@@ -235,7 +237,7 @@ body {
 }
 
 .rk-footer__text {
-  color: #787878;
+  color: #CCC8C3;
   font-size: .75rem;
   margin-bottom: .875rem;
 }
@@ -535,9 +537,9 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, .75);
+  background-color: rgba(34, 36, 37, 0.75);
   bottom: 0;
-  color: #202020;
+  color: rgb(204, 200, 195);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
