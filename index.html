@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>您有一封未讀的信件</title>
-    <link rel="icon" type="image/svg+xml" href="assets/img/urku-ico.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/img/urku-ico.png">
     <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
     <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
     <link rel="stylesheet" href="assets/css/urku.css">
@@ -16,31 +16,14 @@
     <!-- Magnific Popup core JS file -->
     <script src="assets/jquery.magnific-popup.min.js"></script>
     <!-- https://brianium.github.io/watermarkjs -->
-    <script src="assets/watermark.js"></script>
+    <!-- <script src="assets/watermark.js"></script> -->
 
     <link href="assets/all.css" rel="stylesheet"> <!--load all styles -->
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script>
-      function addDarkmodeWidget() {
-        const options = {
-          bottom: '64px', // default: '32px'
-          right: 'unset', // default: '32px'
-          left: '32px', // default: 'unset'
-          time: '0.5s', // default: '0.3s'
-          mixColor: '#fff', // default: '#fff'
-          backgroundColor: '#fff',  // default: '#fff'
-          buttonColorDark: '#100f2c',  // default: '#100f2c'
-          buttonColorLight: '#fff', // default: '#fff'
-          saveInCookies: false, // default: true,
-          label: '🌓', // default: ''
-          autoMatchOsTheme: true // default: true
-        }
-
-        new Darkmode(options).toggle();;
-      }
-      window.addEventListener('load', addDarkmodeWidget);
-    </script> -->
+      // $(window).on('load',function(){$('.preloader').fadeOut(100);filterizd.filterizr('filter','all');});
+      $(window).on('load',function(){$('.preloader').hide();});
+    </script>
 
     <!-- <style>
     @font-face {
@@ -53,10 +36,15 @@
   </head>
 
   <body class="top-fixed">
-    <!-- <div style="font-family: jf-openhuninn;">abc</div> -->
+
+    <div class="preloader">
+      <img src="assets/img/preloader.gif" alt="preloader" style="position:absolute; z-index:-1;">
+      <h3 style="padding-top:200px; color:white; text-align:center;">收信中⋯<br>感謝您的耐心，請稍候。</h3>
+    </div>
+
     <header class="ae-container-fluid ae-container-fluid--full rk-header ">
-      <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
-      <!-- <label for="mobile-menu">
+      <!-- <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+      <label for="mobile-menu">
         <svg>
           <use xlink:href="assets/img/symbols.svg#bar"></use>
         </svg>
@@ -682,7 +670,7 @@
               <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use>
             </svg></a></div> -->
         <div class="ae-grid__item item-lg-12 au-xs-ta-center">
-          <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">2015 URKU PORTFOLIO </span>All Right Reserved.</p>
+          <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">2021 OCUMO Studio </span>All Right Reserved.</p>
         </div>
       </div>
     </footer>
@@ -692,7 +680,16 @@
       // 燈箱效果
       $(document).ready(function()
       {
-        $('.ae-masonry').magnificPopup({ delegate: 'a', type:'image'} );
+        $('.ae-masonry').magnificPopup({ delegate: 'a', type:'image', closeOnContentClick:true, showCloseBtn:false,
+          mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+      		image: {
+      			verticalFit: true
+      		},
+      		zoom: {
+      			enabled: true,
+      			duration: 300 // don't foget to change the duration also in CSS
+      		}
+        });
         reorder();
       });
 
